@@ -122,10 +122,55 @@ code {
 .to-do-card {
   width: 500px;
   height:400px;
-  background-color: #f4f3ec;
+  background-color: #000000;
   padding: 20px;
   border: 3px solid #080808cc;
   border-radius: 12px;
 }
+
+.to-do-list {
+  font-family: var(--sans);
+  font-size: 16px;
+  background-color: #000000;
+  text-align: left;
+  padding: 10px;
+}
+.to-do-list .text {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.to-do-list button {
+  margin-right: 5px;
+}
+.to-do-list .deleteButton {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.to-do-list .MoveUp {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.to-do-list .MoveDown {
+  background-color: #fffbfb;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
 
 
