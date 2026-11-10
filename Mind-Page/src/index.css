@@ -112,8 +112,7 @@ code {
 
 .clock-card {
   width: flex;
-  height: fit-content;
-  min-height: 400px;
+  height: 250px;
   min-width: 500px;
   background-color: #000000;
   padding: 20px;
