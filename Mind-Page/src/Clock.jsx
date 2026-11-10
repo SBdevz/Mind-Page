@@ -30,9 +30,16 @@ function CLOCKcard() {
   };
 
   const formatTime = (totalSeconds) => {
-    const mins = Math.floor(totalSeconds / 60);
-    const secs = totalSeconds % 60;
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    if (totalSeconds >= 3600) {
+      const hours = Math.floor(totalSeconds/3600);
+      const mins = Math.floor((totalSeconds % 3600) / 60);
+      const secs = totalSeconds % 60;
+      return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    } else {
+      const mins = Math.floor(totalSeconds / 60);
+      const secs = totalSeconds % 60;
+      return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
   }
 
   const toggle = () => (setIsActive(!isActive));
@@ -44,6 +51,8 @@ function CLOCKcard() {
   return (
     <div className="clock-card">
       <h1>TIMER</h1>
+      <hr></hr>
+      <br></br>
       <form onSubmit={handleSetTime}>
         <input
           type="number"
@@ -58,7 +67,9 @@ function CLOCKcard() {
           Set Time
         </button>
       </form>
+      <br></br>
       <h2>Time Remaining: {formatTime(seconds)}</h2>
+      <br></br>
       <div>
         <button onClick={toggle} className="clockStartButton">
           {isActive ? 'Pause' : 'Start'}
